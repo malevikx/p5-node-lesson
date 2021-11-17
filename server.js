@@ -4,8 +4,8 @@ let express = require("express"); //dichiarare libreria
 
 let app = express(); //attivare libreria
 
-let port = 3000; //definire la port che si vuole usare
-
+let port = process.env.PORT || 3000; //definire la port che si vuole usare
+// || significa oppure, in questo modo puù funzionare sia su local che su heroku
 let server = app.listen(port);
 
 console.log("server is running on http://localhost:" + port);
